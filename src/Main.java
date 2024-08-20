@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("Задача №1");
@@ -25,19 +27,28 @@ public class Main {
 
         // целочисленный массив
         for (int i = 0; i < array1.length; i++) {
-            System.out.print(array1[i] + ", ");
+            System.out.print(array1[i]);
+            if (i < 2) {
+                System.out.print(", ");
+            }
         }
         System.out.println();
 
         // массив, в котором можно хранить три дробных числа
         for (int i = 0; i < array2.length; i++) {
-            System.out.print(array2[i] + ", ");
+            System.out.print(array2[i]);
+            if (i < 2) {
+                System.out.print(", ");
+            }
         }
         System.out.println();
 
         // произвольный массив
         for (int i = 0; i < array3.length; i++) {
-            System.out.print(array3[i] + ", ");
+            System.out.print(array3[i]);
+            if (i < 4) {
+                System.out.print(", ");
+            }
         }
         System.out.println();
 
@@ -46,20 +57,31 @@ public class Main {
         // в обратном порядке через запятую
 
         // целочисленный массив
-        for (int i = 2; i >= 0; i--) {
-            System.out.print(array1[i] + ", ");
+        for (int i = array1.length - 1; i >= 0; i--) {
+            System.out.print(array1[i]);
+            if (i > 0) {
+                System.out.print(", ");
+            }
+
         }
         System.out.println();
 
         // массив, в котором можно хранить три дробных числа
-        for (int i = 2; i >= 0; i--) {
-            System.out.print(array2[i] + ", ");
+        for (int i = array2.length - 1; i >= 0; i--) {
+            System.out.print(array2[i]);
+            if (i > 0) {
+                System.out.print(", ");
+            }
         }
         System.out.println();
 
         // произвольный массив
-        for (int i = 4; i > 0; i--) {
-            System.out.print(array3[i] + ", ");
+        for (int i = array3.length - 1; i > 0; i--) {
+            System.out.print(array3[i]);
+            if (i > 1) {
+                System.out.print(", ");
+            }
+
         }
         System.out.println();
 
@@ -67,14 +89,7 @@ public class Main {
         // Пройдитесь по первому целочисленному массиву
         // и все нечетные числа в нем сделайте четными
 
-
-
-
-
-
-
-
+        System.out.println(Arrays.toString(array1));
     }
 }
-
 
