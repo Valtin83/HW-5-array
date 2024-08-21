@@ -44,9 +44,10 @@ public class Main {
         System.out.println();
 
         // произвольный массив
-        for (int i = 0; i < array3.length; i++) {
+        for (int i = 0; i < array3.length - 1; i++) {
             System.out.print(array3[i]);
-            if (i < 4) {
+            // после индекса 3 запятую не ставим
+            if (i < 3) {
                 System.out.print(", ");
             }
         }
@@ -62,7 +63,6 @@ public class Main {
             if (i > 0) {
                 System.out.print(", ");
             }
-
         }
         System.out.println();
 
@@ -78,18 +78,24 @@ public class Main {
         // произвольный массив
         for (int i = array3.length - 1; i > 0; i--) {
             System.out.print(array3[i]);
+            // после первого индекса запятую не ставим
             if (i > 1) {
                 System.out.print(", ");
             }
-
         }
         System.out.println();
 
         System.out.println("Задача №4");
         // Пройдитесь по первому целочисленному массиву
         // и все нечетные числа в нем сделайте четными
-
-        System.out.println(Arrays.toString(array1));
+        for (int i = 0; i < array1.length; i++) {
+            // со доступ к каждому элементу массива
+            int x = array1[i];
+            if (x % 2 != 0) {
+                array1[i] = array1[i] + 1;
+            }
+        }
+        System.out.print(Arrays.toString(array1));
     }
 }
 
