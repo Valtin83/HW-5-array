@@ -23,8 +23,7 @@ public class Main {
         // ищим максимальное значение элемента
         int maxExpenses = -1;
         int minExpenses = 999;
-        for (int i = 0; i < expenses.length; i++) {
-            int expens = expenses[i];
+        for (int expens : expenses) {
             if (expens > maxExpenses) {
                 maxExpenses = expens;
             }
@@ -49,7 +48,7 @@ public class Main {
         for (float wastest : wastes) {
             sum += wastest;
             averageSum = (float) (sum / wastes.length);
-            averageSpendingPerWeek = (float) averageSum / weeks;
+            averageSpendingPerWeek = averageSum / weeks;
         }
         System.out.println("Средняя сумма трат за месяц составила " + averageSum + " рублей." +
                 " По " + averageSpendingPerWeek + " рублей в неделю.");
