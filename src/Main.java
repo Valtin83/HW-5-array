@@ -10,9 +10,9 @@ public class Main {
         payments[3] = 98;
         payments[4] = 70;
         // посчитать сумму всех выплат за месяц
-        int sum = 0;
-        for (int i = 0; i < payments.length; i++) {
-            sum = sum + payments[i];
+        double sum = 0;
+        for (int payment : payments) {
+            sum += payment;
         }
         System.out.println("Сумма трат за месяц составила " + sum + " рублей.");
 
@@ -24,18 +24,42 @@ public class Main {
         int maxExpenses = -1;
         int minExpenses = 999;
         for (int i = 0; i < expenses.length; i++) {
-            if (expenses[i] > maxExpenses) {
-                maxExpenses = expenses[i];
+            int expens = expenses[i];
+            if (expens > maxExpenses) {
+                maxExpenses = expens;
             }
             // ищим минимальное значение элемента
-            if (expenses[i] < minExpenses) {
-                minExpenses = expenses[i];
+            if (expens < minExpenses) {
+                minExpenses = expens;
             }
         }
         System.out.println("Минимальная сумма трат за неделю составила " + minExpenses + " рублей." +
                 " Максимальная сумма трат за неделю составила " + maxExpenses + " рубля.");
 
         System.out.println("Задача №3");
-        //
+        // посчитать какую в среднем сумму компания тратила еженедельно
+        // создаём массив с пятью целочисленными элементами и задаём каждому элементу значение
+        float[] wastes = {5096, 896, 5436, 865, 180};
+        // создаём переменную недель в месяце
+        float weeks = 4.4f;
+        // создаём переменную средняя трата за месяц
+        float averageSum = 0;
+        // создаём переменную средняя трата в неделю
+        float averageSpendingPerWeek = 0;
+        for (float wastest : wastes) {
+            sum += wastest;
+            averageSum = (float) (sum / wastes.length);
+            averageSpendingPerWeek = (float) averageSum / weeks;
+        }
+        System.out.println("Средняя сумма трат за месяц составила " + averageSum + " рублей." +
+                " По " + averageSpendingPerWeek + " рублей в неделю.");
+
+        System.out.println("Задача №4");
+        // дан массив символов
+        char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
+        // развернём содержимое массива
+        for (int i = reverseFullName.length - 1; i >= 0; i--) {
+            System.out.print(reverseFullName[i]);
+        }
     }
 }
