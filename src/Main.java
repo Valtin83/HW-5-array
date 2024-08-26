@@ -19,10 +19,10 @@ public class Main {
         System.out.println("Задача №2");
         // найти минимальную и максимальную траты за неделю
         // создан массив с пятью целочисленными элементами и задано каждому элементу значение
-        int[] expenses = {856, 5485, 362, 3995, 8174};
+        int[] expenses = {856, 5485, 362, 3995, 7174};
         // ищим максимальное значение элемента
         int maxExpenses = -1;
-        int minExpenses = 999;
+        int minExpenses = 9999;
         for (int expens : expenses) {
             if (expens > maxExpenses) {
                 maxExpenses = expens;
@@ -60,5 +60,15 @@ public class Main {
         for (int i = reverseFullName.length - 1; i >= 0; i--) {
             System.out.print(reverseFullName[i]);
         }
+        System.out.println();
+
+        // 2-я версия решения +
+        int length = reverseFullName.length;
+        for (int i = 0; i < length / 2; i++) {
+            char cash = reverseFullName[i];
+            reverseFullName[i] = reverseFullName[length - 1 - i];
+            reverseFullName[length - 1 - i] = cash;
+        }
+        System.out.println(reverseFullName);
     }
 }
